@@ -15,7 +15,7 @@ const corsOptions = {
   origin: 'https://proyectozyxaval.vercel.app', 
   methods: "GET, POST, PUT, DELETE, OPTIONS", // Solo permitimos estos métodos
   credentials: true, // Si usas cookies o tokens
-  allowedHeaders: "Content-Type, token", // Asegúrate de permitir encabezados necesarios
+  allowedHeaders: "Content-Type, Authorization, Cache-Control, token", // Asegúrate de permitir encabezados necesarios
 };
 
 app.use(cors(corsOptions));
