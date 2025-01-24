@@ -13,9 +13,9 @@ const db = new sqlite3.Database('./database.sqlite');
 // Configuración de CORS
 const corsOptions = {
   origin: 'https://proyectozyxaval.vercel.app', 
-  methods: ['GET', 'POST', 'PUT','DELETE', 'OPTIONS'], // Solo permitimos estos métodos
+  methods: "GET, POST, PUT, DELETE, OPTIONS", // Solo permitimos estos métodos
   credentials: true, // Si usas cookies o tokens
-  allowedHeaders: ['Content-Type', 'token'], // Asegúrate de permitir encabezados necesarios
+  allowedHeaders: "Content-Type, token", // Asegúrate de permitir encabezados necesarios
 };
 
 app.use(cors(corsOptions));
