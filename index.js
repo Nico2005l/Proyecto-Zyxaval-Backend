@@ -10,7 +10,12 @@ const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./database.sqlite');
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://proyectozyxaval.vercel.app/', 
+  methods: ['GET', 'POST', 'PUT','DELETE'], 
+  credentials: true, // Si usas cookies o tokens
+  allowedHeaders: ['Content-Type', 'Authorization', 'token'], // Asegúrate de permitir encabezados necesarios
+}));
 
 app.use(express.json()); // Middleware para analizar JSON.
 
